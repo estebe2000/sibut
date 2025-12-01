@@ -59,7 +59,6 @@ python src/manage.py import_reference_docs
 ### Backend (`backend/src/`)
 *   `core/` : Application principale contenant les modèles (User, Competency, Assessment).
     *   `models.py` : Définition des données.
-      *   `Assessment` contient désormais la logique duale : `frequency` (Déclaratif) vs `validation_level` (Validation enseignante).
     *   `api.py` : Endpoints de l'API REST.
     *   `management/commands/import_reference_docs.py` : Script de parsing PDF.
     *   `utils/moodle_export.py` : Logique d'export CSV.

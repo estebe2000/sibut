@@ -81,49 +81,21 @@ class EvaluationToken(models.Model):
     expiration_date = models.DateTimeField()
 
 class Assessment(models.Model):
-    # Enums
-    class RoleEvaluator(models.TextChoices):
-        TEACHER = 'TEACHER', 'Enseignant'
-        STUDENT = 'STUDENT', 'Étudiant'
-        TUTOR = 'TUTOR', 'Tuteur'
-
-    class ValidationLevel(models.TextChoices):
+    class Value(models.TextChoices):
         NOT_ACQUIRED = 'NOT_ACQUIRED', 'Non acquis'
         IN_PROGRESS = 'IN_PROGRESS', 'En cours d\'acquisition'
         ACQUIRED = 'ACQUIRED', 'Acquis'
         MASTERED = 'MASTERED', 'Maîtrisé'
 
-    class Frequency(models.TextChoices):
-        RARELY = 'RARELY', 'Rarement'
-        OFTEN = 'OFTEN', 'Souvent'
-        SYSTEMATICALLY = 'SYSTEMATICALLY', 'Systématiquement'
-
-    class ValidationStatus(models.TextChoices):
-        PENDING_WRITING = 'PENDING_WRITING', 'En attente écrit'
-        PENDING_INTERVIEW = 'PENDING_INTERVIEW', 'En attente entretien'
-        VALIDATED = 'VALIDATED', 'Validé'
-
     student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='assessments')
     activity = models.ForeignKey(Activity, on_delete=models.CASCADE, related_name='assessments')
     critical_learning = models.ForeignKey(CriticalLearning, on_delete=models.CASCADE, related_name='assessments')
     evaluator = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='given_assessments')
-
-    # New Logic Fields
-    role_evaluator = models.CharField(max_length=20, choices=RoleEvaluator.choices, default=RoleEvaluator.STUDENT)
-
-    # Student/Tutor Fields
-    is_concerned = models.BooleanField(null=True, blank=True)
-    frequency = models.CharField(max_length=20, choices=Frequency.choices, null=True, blank=True)
-
-    # Teacher Fields
-    validation_level = models.CharField(max_length=20, choices=ValidationLevel.choices, null=True, blank=True)
-    validation_status = models.CharField(max_length=20, choices=ValidationStatus.choices, default=ValidationStatus.PENDING_WRITING)
-
+    value = models.CharField(max_length=20, choices=Value.choices)
     comment = models.TextField(blank=True)
+    is_self_assessment = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    # Legacy field removal note: 'value' and 'is_self_assessment' are removed/replaced.
-
     def __str__(self):
-        return f"{self.student.username} - {self.critical_learning.code} - {self.validation_level or self.frequency}"
+        return f"{self.student.username} - {self.critical_learning.code} - {self.value}"
