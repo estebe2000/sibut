@@ -15,10 +15,11 @@ class CoreModelTest(TestCase):
             student=self.user,
             activity=self.activity,
             critical_learning=self.ac,
-            value="ACQUIRED"
+            validation_level="ACQUIRED",
+            role_evaluator="TEACHER"
         )
         self.assertEqual(Assessment.objects.count(), 1)
-        self.assertEqual(assessment.value, "ACQUIRED")
+        self.assertEqual(assessment.validation_level, "ACQUIRED")
 
     def test_competency_ac_relation(self):
         self.assertEqual(self.competency.critical_learnings.count(), 1)

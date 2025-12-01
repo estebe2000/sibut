@@ -59,9 +59,56 @@ python src/manage.py import_reference_docs
 ### Backend (`backend/src/`)
 *   `core/` : Application principale contenant les modèles (User, Competency, Assessment).
     *   `models.py` : Définition des données.
+      *   `Assessment` contient désormais la logique duale : `frequency` (Déclaratif) vs `validation_level` (Validation enseignante).
     *   `api.py` : Endpoints de l'API REST.
     *   `management/commands/import_reference_docs.py` : Script de parsing PDF.
     *   `utils/moodle_export.py` : Logique d'export CSV.
+
+## API & Payloads (Logique d'Évaluation)
+
+### Enumérations
+
+**Fréquence (Déclaratif Étudiant/Tuteur)**
+*   `RARELY` : Rarement
+*   `OFTEN` : Souvent
+*   `SYSTEMATICALLY` : Systématiquement
+
+**Niveau de Validation (Enseignant)**
+*   `NOT_ACQUIRED` : Non acquis
+*   `IN_PROGRESS` : En cours d'acquisition
+*   `ACQUIRED` : Acquis
+*   `MASTERED` : Maîtrisé
+
+### Exemples de Payloads JSON
+
+**1. Déclaration Étudiant (Auto-positionnement)**
+`POST /api/assessments`
+
+```json
+{
+  "student_id": 1,
+  "critical_learning_id": 10,
+  "activity_id": 5,
+  "is_concerned": true,
+  "frequency": "OFTEN",
+  "comment": "J'ai mobilisé cette compétence lors de la phase de prospection."
+}
+```
+*Note : `validation_level` doit être omis ou null. Sinon `403 Forbidden`.*
+
+**2. Validation Enseignant**
+`POST /api/assessments` (Création directe) ou `PUT /api/assessments/{id}/validate` (Validation d'une déclaration)
+
+```json
+{
+  "student_id": 1,
+  "critical_learning_id": 10,
+  "activity_id": 5,
+  "validation_level": "ACQUIRED",
+  "validation_status": "VALIDATED",
+  "comment": "Validé suite à l'entretien du 20/10."
+}
+```
 
 ### Frontend (`frontend/`)
 *   `src/` : Code source Vue.js.

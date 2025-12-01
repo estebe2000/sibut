@@ -37,11 +37,20 @@ Les compétences sont extraites automatiquement du programme national (PDF).
 * Les codes couleurs sont attribués par compétence.
 
 ### Évaluation par Compétences (APC)
-L'évaluation ne se fait pas sur 20. Les niveaux d'acquisition sont :
-- **Non acquis**
-- **En cours d'acquisition**
-- **Acquis**
-- **Maîtrisé**
+Le processus d'évaluation se déroule en deux temps :
+
+1. **Auto-positionnement (Étudiant/Tuteur)** :
+   - L'étudiant déclare s'il est concerné par la compétence ("Oui/Non").
+   - Si oui, il indique la **fréquence** de mobilisation : "Rarement", "Souvent" ou "Systématiquement".
+   *Ce positionnement est déclaratif et n'a pas valeur de validation.*
+
+2. **Validation (Enseignant)** :
+   - L'acquisition réelle n'est validée qu'après la remise d'un écrit réflexif et un entretien oral.
+   - L'enseignant attribue alors le niveau final :
+     - **Non acquis**
+     - **En cours d'acquisition**
+     - **Acquis**
+     - **Maîtrisé**
 
 ### Export Moodle
 Les administrateurs peuvent télécharger un fichier CSV contenant les évaluations pour les réimporter dans le carnet de notes Moodle.

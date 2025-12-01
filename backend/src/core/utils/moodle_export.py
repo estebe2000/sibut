@@ -12,9 +12,12 @@ def export_grades_csv(cohort_id=None):
     writer = csv.writer(output)
 
     # Header
-    writer.writerow(['username', 'competency_code', 'ac_code', 'value', 'comment'])
+    writer.writerow(['username', 'competency_code', 'ac_code', 'validation_level', 'comment'])
 
-    assessments = Assessment.objects.all()
+    # Only export validated assessments? Or all? Let's export all but show status.
+    # Actually grades usually imply the final value.
+    assessments = Assessment.objects.filter(validation_level__isnull=False)
+
     if cohort_id:
         assessments = assessments.filter(student__student_profile__cohort_id=cohort_id)
 
@@ -23,7 +26,7 @@ def export_grades_csv(cohort_id=None):
             assessment.student.username,
             assessment.critical_learning.competency.short_code,
             assessment.critical_learning.code,
-            assessment.value,
+            assessment.validation_level,
             assessment.comment
         ])
 
