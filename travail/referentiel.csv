@@ -1,0 +1,124 @@
+competence_code,competence_nom,ac_code,ac_niveau,ac_description
+C1,Marketing,AC11.01,1,Analyser	l'environnement	d'une	entreprise	en	repérant	et	appréciant	les
+C1,Marketing,AC11.02,1,Mettre	en	oeuvre	une	étude	de	marché	dans	un	environnement	simple
+C1,Marketing,AC11.03,1,Choisir	une	cible	et	un	positionnement	en	fonction	de	la	segmentation	du
+C1,Marketing,AC11.04,1,"Concevoir	une	offre	cohérente	et	éthique	en	termes	de	produits,	de	prix,	de"
+C1,Marketing,AC21.01,2,Diagnostiquer	l'environnement	en	appréhendant	les	enjeux	sociaux	et
+C1,Marketing,AC21.02,2,Mettre	en	œuvre	une	étude	de	marché	dans	un	environnement	complexe
+C1,Marketing,AC21.03,2,Mettre	en	place	une	stratégie	marketing	dans	un	environnement	complexe
+C1,Marketing,AC21.04,2,Concevoir	un	mix	étendu	pour	une	offre	complexe
+C1,Marketing,AC31.01,3,Mettre	en	place	des	outils	de	veille	pour	anticiper	les	évolutions	de
+C1,Marketing,AC31.02,3,"Elaborer	une	stratégie	marketing	dans	un	environnement	instable	(sanitaire,"
+C1,Marketing,AC31.03,3,Faire	évoluer	l'offre	à	l'aide	de	leviers	de	création	de	valeur
+C1,Marketing,AC31.04,3,Intégrer	la	RSE	dans	la	stratégie	de	l'offre
+C2,Vente,AC12.01,1,Préparer	un	plan	de	découverte	qui	permette	de	profiler	le	client	et	découvir
+C2,Vente,AC12.02,1,Concevoir	un	argumentaire	de	vente	qui	permette	de	proposer	une	solution
+C2,Vente,AC12.03,1,Concevoir	des	OAV	efficaces
+C2,Vente,AC12.04,1,Evaluer	la	performance	commerciale	au	moyen	d'indicateurs
+C2,Vente,AC12.05,1,Recourir	aux	techniques	adaptées	à	la	démarche	de	prospection
+C2,Vente,AC12.06,1,Recourir	aux	codes	d'expression	spécifiques	et	professionnels
+C2,Vente,AC22.01,2,Convaincre	en	exprimant	avec	empathie	l’offre	en	termes	d’avantages
+C2,Vente,AC22.02,2,"Négocier	le	prix	:	défendre,	valoriser	l'offre	en	percevant	les	stratégies"
+C2,Vente,AC22.03,2,Maîtriser	les	éléments	juridiques	et	comptables	de	l'offre
+C2,Vente,AC22.04,2,"Utiliser	les	OAV	(feuille	de	calcul,	supports	d’argumentation...)	à	bon"
+C2,Vente,AC22.05,2,Organiser	le	suivi	de	ses	résultats	pour	gagner	en	performance	au	sein	de
+C2,Vente,AC22.06,2,Prendre	en	compte	les	enjeux	de	la	fonction	achat	pour	la	performance
+C2,Vente,AC32.01,3,Identifier	les	techniques	d’achat	employées	par	un	acheteur	professionnel
+C2,Vente,AC32.02,3,"Elaborer	des	outils	de	gestion	et	de	calcul	efficaces	(facture,"
+C2,Vente,AC32.03,3,"Maîtriser	les	codes	propres	à	l'univers	spécifique	rencontré	:	achat,	finance,"
+C3,Communication commerciale,AC13.01,1,Identifier	les	cibles	et	objectifs	de	communication	en	tenant	compte	de	la
+C3,Communication commerciale,AC13.02,1,Analyser	de	manière	pertinente	les	moyens	de	communication	commerciale
+C3,Communication commerciale,AC13.03,1,"Elaborer	des	supports	simples	(Imprimé	Sans	Adresse,	affiches,	dossier	de"
+C3,Communication commerciale,AC13.04,1,"Analyser	les	indicateurs	post	campagne	(impact,	efficacité)"
+C3,Communication commerciale,AC23.01,2,Elaborer	une	stratégie	de	communication	adaptée	au	brief	agence
+C3,Communication commerciale,AC23.02,2,Etablir	une	stratégie	de	moyens	en	utilisant	les	indicateurs	de	choix	des
+C3,Communication commerciale,AC23.03,2,Proposer	un	plan	de	com	360°	en	élaborant	les	supports	et	en	veillant	à	leur
+C3,Communication commerciale,AC23.04,2,"Mettre	en	œuvre	une	stratégie	digitale	:	blog,	réseaux	sociaux,	influenceurs,"
+C4,Management,AC24.01SME,2,Identifier	les	valeurs	et	territoires	de	la	marque
+C4,Management,AC24.02SME,2,Mesurer	la	visibilité	de	la	marque	et	sa	notoriété
+C4,Management,AC24.03SME,2,Développer	la	communication	de	marque	et	le	marketing	de	contenu
+C4,Management,AC24.04SME,2,Piloter	les	relations	publiques	et	les	relations	presse	en	veillant	aux
+C4,Management,AC34.01SME,3,Déterminer	les	attributs	et	territoires	de	la	marque
+C4,Management,AC34.02SME,3,Elaborer	une	idéologie	(ADN	/valeurs	défendues)	de	marque	et	ses	composantes
+C4,Management,AC34.03SME,3,Construire	l'identité	de	la	marque
+C4,Management,AC34.04SME,3,"Développer	la	communauté	de	marque	et	l'adhésion	(community	management,	veille"
+C5,Retail marketing,AC25.01SME,2,Elaborer	un	projet	événementiel	simple	répondant	à	la	demande
+C5,Retail marketing,AC25.02SME,2,"Intégrer	les	contraintes	financières,	juridiques	et	logistiques"
+C5,Retail marketing,AC25.03SME,2,Gérer	la	communication	et	la	commercialisation	de	l'événement
+C5,Retail marketing,AC25.04SME,2,Piloter	le	projet
+C5,Retail marketing,AC25.05SME,2,Mesurer	l'impact	de	l'événement
+C5,Retail marketing,AC35.01SME,3,Créer	un	événement	complexe	adapté	aux	attentes	du	commanditaire
+C5,Retail marketing,AC35.02SME,3,Intégrer	les	enjeux	sécuritaires	et	reglementaires	des	événements	de	grande
+C5,Retail marketing,AC35.03SME,3,Rechercher	des	partenaires	et	des	subventions
+C5,Retail marketing,AC35.04SME,3,Gérer	des	prestataires
+C5,Retail marketing,AC35.05SME,3,Manager	un	évènement	complexe
+C4,Management,AC24.01MMPV,2,Analyser	les	indicateurs	de	performances	commerciales
+C4,Management,AC24.02MMPV,2,Communiquer	sur	les	objectifs	et	les	résultats	efficacement	et
+C4,Management,AC24.03MMPV,2,Planifier	les	missions	de	l'équipe	en	accord	avec	la	stratégie	de	l'espace	de
+C4,Management,AC34.01MMPV,3,Fixer	les	objectifs	en	accord	avec	la	méthode	SMART
+C4,Management,AC34.02MMPV,3,Fédérer	les	équipes	autour	de	l'atteinte	des	objectifs
+C4,Management,AC34.03MMPV,3,Sélectionner	des	collaborateurs	en	considérant	les	besoins	de	l'équipe
+C4,Management,AC34.04MMPV,3,Intégrer	des	collaborateurs	à	l'équipe
+C4,Management,AC34.05MMPV,3,Valoriser	les	compétences	des	membres	de	l'équipe
+C5,Retail marketing,AC25.01MMPV,2,Analyser	le	secteur	et	l'environnement	concurrentiel
+C5,Retail marketing,AC25.02MMPV,2,S'approprier	la	chaîne	d'approvisionnement	de	l'espace	de	vente
+C5,Retail marketing,AC25.03MMPV,2,Agencer	l'offre	sur	l'espace	de	vente	en	utilisant	les	techniques	de
+C5,Retail marketing,AC25.04MMPV,2,Personnaliser	la	relation	client	en	appliquant	les	principes	de	base	de	la
+C5,Retail marketing,AC25.05MMPV,2,Gérer	la	diversité	des	points	de	contact	avec	le	client
+C5,Retail marketing,AC35.01MMPV,3,Comprendre	les	enjeux	de	la	distribution	et	les	évolutions	du	secteur
+C5,Retail marketing,AC35.02MMPV,3,Elaborer	une	stratégie	commerciale	en	cohérence	avec	l'environnement
+C5,Retail marketing,AC35.03MMPV,3,Gérer	la	relation	avec	les	fournisseurs	ou	le	réseau
+C5,Retail marketing,AC35.04MMPV,3,"Implanter	un	plan	de	merchandising,	défini	par	le	réseau	ou	par	l'équipe	de"
+C5,Retail marketing,AC35.05MMPV,3,Optimiser	les	outils	de	GRC
+C5,Retail marketing,AC35.06MMPV,3,Optimiser	le	parcours	client	dans	une	perspective	omnicanale	par	l'intégration
+C4,Management,AC24.01MDEE,2,Mobiliser	des	indicateurs	de	performance	en	fonction	du	volume	et	de	la
+C4,Management,AC24.02MDEE,2,Identifier	les	spécifités	du	marketing	digital
+C4,Management,AC24.03MDEE,2,Utiliser	un	cahier	des	charges	e-business
+C4,Management,AC24.04MDEE,2,Intégrer	les	spécificités	du	e-commerce
+C4,Management,AC24.05MDEE,2,Respecter	le	processus	logistique
+C4,Management,AC34.01MDEE,3,Exploiter	les	données	de	masse	en	mobilisant	les	bons	outils	de	traitement	de
+C4,Management,AC34.02MDEE,3,Mettre	en	oeuvre	des	spécificités	du	marketing	digital
+C4,Management,AC34.03MDEE,3,Elaborer	un	cahier	des	charges	e-business
+C4,Management,AC34.04MDEE,3,S'appuyer	sur	les	indicateurs	de	performances	pour	améliorer	la	relation
+C4,Management,AC34.05MDEE,3,Proposer	des	solutions	adaptées	aux	spécificités	de	la	chaine	logistique	du
+C5,Retail marketing,AC25.01MDEE,2,Concevoir	un	modèle	d'affaires	simplifié
+C5,Retail marketing,AC25.02MDEE,2,Analyser	de	façon	pertinente	la	situation	marché-entreprise	grâce	aux	outils
+C5,Retail marketing,AC25.03MDEE,2,Analyser	la	situation	financière	d'une	entreprise	à	partir	des	éléments	de	la
+C5,Retail marketing,AC25.04MDEE,2,Identifier	les	éléments	pertinents	nécessaires	à	la	réalisation	du	projet
+C5,Retail marketing,AC25.05MDEE,2,Utiliser	les	techniques	de	créativité	individuelle	et	collective
+C5,Retail marketing,AC25.06MDEE,2,Contribuer	à	l'enrichissement	d'un	projet	collectif
+C5,Retail marketing,AC35.01MDEE,3,"Concevoir	un	modèle	d'affaires	complet	incluant	les	sources	de	valeur,	les"
+C5,Retail marketing,AC35.02MDEE,3,Faire	des	préconisations	grâce	aux	outils	du	diagnostic	stratégique
+C5,Retail marketing,AC35.03MDEE,3,Elaborer	les	documents	financiers	nécessaires	en	tant	que	concepteur	du
+C5,Retail marketing,AC35.04MDEE,3,Contrôler	la	conformité	et	la	pertinence	du	modèle
+C5,Retail marketing,AC35.05MDEE,3,Choisir	les	techniques	de	créativité	individuelle	et	collective	adaptées
+C5,Retail marketing,AC35.06MDEE,3,Développer	un	projet	de	façon	proactive
+C4,Management,AC24.01BI,2,Réaliser	de	manière	structurée	un	diagnostic	export/import	à	l'aide	d'outils
+C4,Management,AC24.02BI,2,Collecter	les	informations	de	l'environnement	international	(identifier	les
+C4,Management,AC24.03BI,2,"Sélectionner	les	marchés	opportuns,	à	l'export	et	à	l'import	à	l'aide"
+C4,Management,AC34.01BI,3,Evaluer	le	diagnostic	export/import	et	faire	des	préconisations
+C4,Management,AC34.02BI,3,Evaluer	les	marchés	internationaux	en	prenant	en	compte	le	contexte
+C4,Management,AC34.03BI,3,"Proposer	le	mode	d'entrée	(filiale,	joint	venture,	etc.)	le	plus	adéquate"
+C5,Retail marketing,AC25.01BI,2,Gérer	les	processus	de	vente	et	d'achat	à	l'international	;	identifier	et
+C5,Retail marketing,AC25.02BI,2,Suivre	les	opérations	logistiques	à	l'international	grâce	à	l'appréhension	des
+C5,Retail marketing,AC25.03BI,2,"Sélectionner	le	mode	de	transport,	l'incoterm,	l'assurance	et	les	modalités	de"
+C5,Retail marketing,AC25.04BI,2,Positionner	l'offre	en	fonction	des	spécificités	culturelles	identifiées	sur
+C5,Retail marketing,AC35.01BI,3,Mobiliser	ses	connaissances	en	processus	de	vente	et	d'achat	dans	des
+C5,Retail marketing,AC35.02BI,3,Optimiser	la	chaîne	logistique	à	l'international	en	intégrant	les	enjeux
+C5,Retail marketing,AC35.03BI,3,Gérer	l'administration	des	ventes/achats	à	l'international	notamment	grâce	à
+C5,Retail marketing,AC35.04BI,3,Proposer	l'offre	marketing	adaptée	au(x)	marché(s)	ciblé(s)
+C4,Management,AC24.01BDMRC,2,Réaliser	un	diagnostic	avant	la	mise	en	place	d'actions	commerciales
+C4,Management,AC24.02BDMRC,2,Mesurer	l'importance	du	choix	des	cibles	commerciales
+C4,Management,AC24.03BDMRC,2,Travailler	en	équipe	tout	en	respectant	le	rôle	de	chacun
+C4,Management,AC24.04BDMRC,2,Adapter	l'offre	à	une	demande	client
+C4,Management,AC34.01BDMRC,3,Mettre	en	oeuvre	la	stratégie	marketing	et	commerciale	au	sein	de	l'équipe
+C4,Management,AC34.02BDMRC,3,Fédérer	les	équipes	autour	de	la	réussite	des	objectifs	marketing	et
+C4,Management,AC34.03BDMRC,3,Co-construire	une	offre	en	collaboration	avec	les	parties	prenantes	concernées
+C5,Retail marketing,AC25.01BDMRC,2,Intégrer	la	satisfaction	client	dans	la	réussite	de	la	relation	commerciale	et
+C5,Retail marketing,AC25.02BDMRC,2,Piloter	sa	relation	client	au	moyen	d'indicateurs
+C5,Retail marketing,AC25.03BDMRC,2,Traiter	les	réclamations	client	pour	optimiser	l'activité
+C5,Retail marketing,AC25.04BDMRC,2,Exploiter	de	façon	pertinente	les	outils	de	la	relation	client
+C5,Retail marketing,AC35.01BDMRC,3,Asseoir	la	réussite	de	la	relation	client	sur	la	cohérence	globale	de
+C5,Retail marketing,AC35.02BDMRC,3,Optimiser	l'expérience	client	par	la	mise	en	place	d'un	processus
+C5,Retail marketing,AC35.03BDMRC,3,Contribuer	à	la	diffusion	de	la	culture	client	au	sein	de	l'organisation
+C5,Retail marketing,AC35.04BDMRC,3,Faire	évoluer	les	outils	de	la	relation	client

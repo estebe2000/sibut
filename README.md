@@ -9,6 +9,9 @@ SIBUT est une plateforme web conçue pour gérer le suivi de l'acquisition des c
 
 *   **Architecture Conteneurisée** : Déploiement facile via Docker (Django + Vue + Postgres).
 *   **Modèle de Données APC** : Gestion des Compétences, Apprentissages Critiques (AC), et Niveaux.
+*   **Workflow d'Évaluation Dual** :
+    *   *Auto-positionnement (Déclaratif)* : Étudiants/Tuteurs (Fréquence de mobilisation).
+    *   *Validation (Certificateur)* : Enseignants (Niveaux d'acquisition après entretien).
 *   **Import Automatique** : Extraction des compétences depuis le programme officiel (PDF).
 *   **API REST** : Backend Django Ninja performant.
 *   **Export Moodle** : Génération de CSV pour l'intégration des notes.

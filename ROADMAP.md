@@ -17,6 +17,11 @@ Ce fichier recense les fonctionnalités prévues et les idées pour les futures 
 ### Frontend - Teacher Board
 - [ ] Tableau croisé dynamique (Étudiants x Compétences).
 - [ ] Fonction "Saisie en masse" pour noter rapidement une activité.
+- [ ] **Interface de Validation** : Vue spécifique pour l'entretien (Affichage de l'auto-positionnement étudiant + Champ de validation final).
+
+### UX / UI - Workflow d'Évaluation
+- [ ] **Formulaire Étudiant** : Switch "Concernés" (Oui/Non) -> Si Oui, Sélecteur de Fréquence (Rarement, Souvent, Systématiquement).
+- [ ] **Visibilité des statuts** : Afficher clairement "En attente entretien" ou "Validé" sur le dashboard.
 
 ## Idées Futures (Backlog)
 
