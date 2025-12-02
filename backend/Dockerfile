@@ -15,6 +15,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     netcat-openbsd \
     gcc \
     libpq-dev \
+    libldap2-dev \
+    libsasl2-dev \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install python dependencies

@@ -4,6 +4,8 @@ Django settings for project project.
 
 from pathlib import Path
 import os
+import ldap
+from django_auth_ldap.config import LDAPSearch, GroupOfNamesType
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -105,6 +107,37 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTH_USER_MODEL = 'core.User'
+
+# LDAP Configuration
+# Only configure if LDAP_SERVER_URI is present in env
+if os.environ.get('LDAP_SERVER_URI'):
+    AUTHENTICATION_BACKENDS = [
+        "django_auth_ldap.backend.LDAPBackend",
+        "django.contrib.auth.backends.ModelBackend",
+    ]
+
+    AUTH_LDAP_SERVER_URI = os.environ.get('LDAP_SERVER_URI')
+    AUTH_LDAP_BIND_DN = os.environ.get('LDAP_BIND_DN', "")
+    AUTH_LDAP_BIND_PASSWORD = os.environ.get('LDAP_BIND_PASSWORD', "")
+
+    # Search for users
+    ldap_base_dn = os.environ.get('LDAP_USER_SEARCH_BASE', "dc=example,dc=com")
+    AUTH_LDAP_USER_SEARCH = LDAPSearch(
+        ldap_base_dn,
+        ldap.SCOPE_SUBTREE,
+        "(uid=%(user)s)",
+    )
+
+    # Map attributes
+    AUTH_LDAP_USER_ATTR_MAP = {
+        "first_name": "givenName",
+        "last_name": "sn",
+        "email": "mail",
+    }
+
+    # Role mapping logic could be here if groups are used
+    # AUTH_LDAP_GROUP_SEARCH = ...
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/

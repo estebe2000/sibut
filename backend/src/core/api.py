@@ -2,11 +2,12 @@ from ninja import NinjaAPI, Schema, File, Form
 from ninja.files import UploadedFile
 from typing import List, Optional
 from django.shortcuts import get_object_or_404
-from core.models import Competency, CriticalLearning, Assessment, User, StudentProfile, Cohort, Activity
+from core.models import Competency, CriticalLearning, Assessment, User, StudentProfile, Cohort, Activity, Proof
 from django.db.models import Count, Q
 from .utils.moodle_export import export_grades_csv
 from .utils.moodle_import import import_moodle_csv
 from .utils.student_import import import_students_csv
+from .services.ai_advisor import AIAdvisor
 from django.http import HttpResponse,  Http404
 
 api = NinjaAPI()
@@ -53,6 +54,9 @@ class AssessmentCreateSchema(Schema):
 class ValidationUpdateSchema(Schema):
     validation_status: str # PENDING_INTERVIEW, VALIDATED
     validation_level: Optional[str] = None # Required if VALIDATED
+
+class ActivityDescriptionSchema(Schema):
+    description: str
 
 # Endpoints
 
@@ -212,3 +216,42 @@ def import_moodle_students(
         import traceback
         traceback.print_exc()
         return 400, {"message": str(e)}
+
+@api.post("/proofs/upload", response={200: dict, 400: dict})
+def upload_proof(
+    request,
+    file: UploadedFile = File(...),
+    description: str = Form(""),
+    activity_id: Optional[int] = Form(None)
+):
+    if not request.user.is_authenticated or request.user.role != User.Role.STUDENT:
+        # Tutors uploading? Maybe later.
+        return 400, {"message": "Only students can upload proofs."}
+
+    try:
+        activity = None
+        if activity_id:
+            activity = get_object_or_404(Activity, id=activity_id)
+
+        proof = Proof.objects.create(
+            student=request.user,
+            activity=activity,
+            file=file,
+            description=description
+        )
+        return {"id": proof.id, "file_url": proof.file.url}
+    except Exception as e:
+        return 400, {"message": str(e)}
+
+@api.post("/activities/suggest-acs")
+def suggest_acs(request, payload: ActivityDescriptionSchema):
+    """
+    Uses AI to suggest ACs based on activity description.
+    """
+    # Fetch all ACs to provide context to AI
+    acs = CriticalLearning.objects.all().values('code', 'description')
+    acs_list = list(acs)
+
+    advisor = AIAdvisor()
+    suggestion = advisor.suggest_acs(payload.description, acs_list)
+    return {"suggestion": suggestion}

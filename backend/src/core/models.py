@@ -127,3 +127,15 @@ class Assessment(models.Model):
 
     def __str__(self):
         return f"{self.student.username} - {self.critical_learning.code} - {self.validation_level or self.frequency}"
+
+class Proof(models.Model):
+    student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='proofs')
+    activity = models.ForeignKey(Activity, on_delete=models.SET_NULL, null=True, blank=True, related_name='proofs')
+    # Assessment linking is optional, can be linked to activity generally or specific assessment?
+    # Usually proof is per activity.
+    file = models.FileField(upload_to='proofs/%Y/%m/')
+    description = models.TextField(blank=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Proof by {self.student.username} for {self.activity.title if self.activity else 'General'}"
