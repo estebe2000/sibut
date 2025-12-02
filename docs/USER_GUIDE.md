@@ -31,13 +31,24 @@ L'application est accessible via votre navigateur web.
 
 ## Fonctionnalités Clés
 
-### Importation du Référentiel
+### Importation des Données
 
-Le système supporte deux modes d'importation :
-1. **Automatique (PDF)** : Via la commande d'administration, pour le programme national BUT TC.
-2. **Moodle (CSV)** : Via l'API, pour importer un référentiel existant dans Moodle.
+#### 1. Référentiel de Compétences
+Le système supporte deux modes :
+* **Automatique (PDF)** : Via la commande d'administration, pour le programme national BUT TC.
+* **Moodle (CSV)** : Via l'API, pour importer un référentiel existant dans Moodle.
    * Format attendu : CSV Moodle Competency framework.
    * Colonnes : `ID number`, `Short name`, `Description`, `Parent ID number`.
+
+#### 2. Importation des Étudiants (Moodle)
+Il est possible d'importer la liste des étudiants depuis un export CSV "Participants" de Moodle.
+* **Endpoint** : `POST /api/import/moodle/students`
+* **Format CSV** : Colonnes `First name`, `Surname`, `Email address`, `ID number` (INE).
+* **Données requises lors de l'import** :
+    * Fichier CSV
+    * ID de la Cohorte (Promo)
+    * Niveau actuel (ex: BUT1)
+    * Année de la cohorte (ex: 2025)
 
 ### Évaluation par Compétences (APC)
 Le processus d'évaluation se déroule en deux temps :

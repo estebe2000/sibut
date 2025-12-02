@@ -1,4 +1,4 @@
-from ninja import NinjaAPI, Schema, File
+from ninja import NinjaAPI, Schema, File, Form
 from ninja.files import UploadedFile
 from typing import List, Optional
 from django.shortcuts import get_object_or_404
@@ -6,6 +6,7 @@ from core.models import Competency, CriticalLearning, Assessment, User, StudentP
 from django.db.models import Count, Q
 from .utils.moodle_export import export_grades_csv
 from .utils.moodle_import import import_moodle_csv
+from .utils.student_import import import_students_csv
 from django.http import HttpResponse,  Http404
 
 api = NinjaAPI()
@@ -186,4 +187,28 @@ def import_moodle_framework(request, file: UploadedFile = File(...)):
         stats = import_moodle_csv(content)
         return stats
     except Exception as e:
+        return 400, {"message": str(e)}
+
+@api.post("/import/moodle/students", response={200: dict, 400: dict})
+def import_moodle_students(
+    request,
+    file: UploadedFile = File(...),
+    cohort_id: int = Form(...),
+    current_level: str = Form(...), # BUT1, BUT2...
+    cohort_year: int = Form(...)
+):
+    """
+    Imports students from Moodle 'Participants' export (CSV).
+    Required columns: Email, First name, Last name, ID number (optional but recommended).
+    """
+    if not file.name.endswith('.csv'):
+        return 400, {"message": "File must be a CSV."}
+
+    try:
+        content = file.read()
+        stats = import_students_csv(content, cohort_id, current_level, cohort_year)
+        return stats
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
         return 400, {"message": str(e)}
