@@ -32,9 +32,12 @@ L'application est accessible via votre navigateur web.
 ## Fonctionnalités Clés
 
 ### Importation du Référentiel
-Les compétences sont extraites automatiquement du programme national (PDF).
-* Les niveaux (1, 2, 3) sont gérés.
-* Les codes couleurs sont attribués par compétence.
+
+Le système supporte deux modes d'importation :
+1. **Automatique (PDF)** : Via la commande d'administration, pour le programme national BUT TC.
+2. **Moodle (CSV)** : Via l'API, pour importer un référentiel existant dans Moodle.
+   * Format attendu : CSV Moodle Competency framework.
+   * Colonnes : `ID number`, `Short name`, `Description`, `Parent ID number`.
 
 ### Évaluation par Compétences (APC)
 Le processus d'évaluation se déroule en deux temps :

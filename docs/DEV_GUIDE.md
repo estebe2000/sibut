@@ -63,6 +63,7 @@ python src/manage.py import_reference_docs
     *   `api.py` : Endpoints de l'API REST.
     *   `management/commands/import_reference_docs.py` : Script de parsing PDF.
     *   `utils/moodle_export.py` : Logique d'export CSV.
+    *   `utils/moodle_import.py` : Logique d'import CSV Moodle.
 
 ## API & Payloads (Logique d'Évaluation)
 
